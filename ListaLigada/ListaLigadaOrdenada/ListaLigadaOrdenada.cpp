@@ -126,6 +126,15 @@ void inserirElemento()
 	novo->prox = NULL;
 	NO* aux = primeiro;
 
+	while (aux != NULL) {
+		if (aux->valor == novo->valor) {
+			cout << "O elemento ja esta na lista. \n";
+			return;
+		}
+		aux = aux->prox;
+	}
+	aux = primeiro;
+
 	if (primeiro == NULL)
 	{
 		primeiro = novo;
