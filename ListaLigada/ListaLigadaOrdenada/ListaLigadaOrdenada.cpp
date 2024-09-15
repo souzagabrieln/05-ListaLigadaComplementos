@@ -126,7 +126,7 @@ void inserirElemento()
 	novo->prox = NULL;
 	NO* aux = primeiro;
 
-	while (aux != NULL) {
+	while (aux != NULL && aux->valor <= novo->valor) {
 		if (aux->valor == novo->valor) {
 			cout << "O elemento ja esta na lista. \n";
 			return;
